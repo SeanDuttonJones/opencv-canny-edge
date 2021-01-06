@@ -1,6 +1,5 @@
-import numpy as np
 import cv2 as cv
-from matplotlib import pyplot as plt
+from matplotlib import pyplot as plot
 
 img = cv.imread("plant@2x.jpg", 0)
 
@@ -8,11 +7,11 @@ img = cv.imread("plant@2x.jpg", 0)
 edges = cv.Canny(img, 50, 100)
 
 # sets the plot's title
-plt.title("Canny Edges")
+plot.title("Canny Edges")
 
 # removes the numbers from the x and y axis
-plt.xticks([]), plt.yticks([])
+plot.xticks([]), plot.yticks([])
 
 # shows the final plot
-plt.imshow(edges, cmap="gray")
-plt.show()
+plot.imshow(edges, cmap="gray")
+plot.show()
